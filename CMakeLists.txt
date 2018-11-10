@@ -31,21 +31,21 @@ add_dependencies( googletest googletest_external)
 add_library( googletest_main INTERFACE )
 target_include_directories( googletest_main INTERFACE
   INTERFACE $<BUILD_INTERFACE:${GTEST_INCLUDE_DIR}>)
-target_link_libraries( googletest_main INTERFACE  ${GTEST_MAIN_LIB} googletest PRIVATE pthread )
+target_link_libraries( googletest_main INTERFACE  ${GTEST_MAIN_LIB} googletest pthread )
 add_dependencies( googletest_main googletest_external)
 
 
 add_library( googlemock INTERFACE )
 target_include_directories( googlemock INTERFACE
   INTERFACE $<BUILD_INTERFACE:${GTEST_INCLUDE_DIR}> )
-target_link_libraries( googlemock INTERFACE ${GMOCK_LIB} googletest PRIVATE pthread )
+target_link_libraries( googlemock INTERFACE ${GMOCK_LIB} googletest pthread )
 add_dependencies( googlemock googletest_external)
 
 
 add_library( googlemock_main INTERFACE )
 target_include_directories( googlemock_main INTERFACE
   INTERFACE $<BUILD_INTERFACE:${GEST_INCLUDE_DIR}>)
-target_link_libraries( googlemock_main INTERFACE ${GMOCK_MAIN_LIB} googlemock PRIVATE pthread )
+target_link_libraries( googlemock_main INTERFACE ${GMOCK_MAIN_LIB} googlemock pthread )
 add_dependencies( googlemock_main googletest_external)
 
 
