@@ -13,7 +13,7 @@ set( GMOCK_MAIN_LIB ${GTEST_LIB_DIR}/libgmock_main.a )
 externalproject_add( googletest_external
   GIT_REPOSITORY      https://github.com/google/googletest.git
   PREFIX              ${GTEST_PREFIX}
-  SOURCE_DIR          ${GTEST_PREFIX}/src
+  SOURCE_DIR          ${CMAKE_CURRENT_BINARY_DIR}/src
   CMAKE_ARGS          -DCMAKE_INSTALL_PREFIX=${GTEST_PREFIX}
   BUILD_BYPRODUCTS
     ${GTEST_LIB}
