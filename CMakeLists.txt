@@ -10,7 +10,7 @@ set( GTEST_MAIN_LIB ${GTEST_LIB_DIR}/libgtest_main.a )
 set( GMOCK_LIB ${GTEST_LIB_DIR}/libgmock.a )
 set( GMOCK_MAIN_LIB ${GTEST_LIB_DIR}/libgmock_main.a )
 
-externalproject_add( google::test_external
+externalproject_add( googletest_external
   GIT_REPOSITORY      https://github.com/google/googletest.git
   PREFIX              ${GTEST_PREFIX}
   SOURCE_DIR          ${CMAKE_BINARY_DIR}/gtest/src
