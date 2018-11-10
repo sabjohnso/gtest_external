@@ -11,11 +11,12 @@
   No effor was made or is planned to make this solution portable to Window
 
 * Targets
+  Only one of the provided targets needs to be linked to a test executable
 
-   - google::test
-   - google::test_main
-   - google::mock
-   - google::mock_main
+   - google::test :: GTest library
+   - google::test_main :: GTest library + the main function to run all linked tests
+   - google::mock :: GTest library + GMock library 
+   - google::mock_main :: GTest library + GMock library + the main function to run all linked tests
 
 * How to use
 
