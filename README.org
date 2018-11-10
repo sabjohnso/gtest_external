@@ -1,0 +1,33 @@
+#+TITLE: GTest External
+
+* Overview
+
+  This repository provides a CMakeList.txt file for building GTest as an external
+  project and defines targets that can be linked where needed for testing. The
+  intention is for this repositor to be consumed as a git submodule.
+
+* Known issues
+
+  No effor was made or is planned to make this solution portable to Window
+
+* Targets
+
+   - google::test
+   - google::test_main
+   - google::mock
+   - google::mock_main
+
+* How to use
+
+  #+BEGIN_SRC bash
+    git submodule add --recursive https://github.com/sabjohnso/gtest_external.git gtest_external
+  #+END_SRC
+
+  #+BEGIN_SRC cmake
+    add_subdirectory( gtest_external )
+    add_executable(my_test my_test.cpp)
+    target_link_libraries( my_test PRIVATE google::test_main)
+    add_test(my my_test)
+  #+END_SRC
+  
+
